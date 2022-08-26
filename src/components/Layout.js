@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
       <Wrapper>
         <Content>{children}</Content>
         <Footer>
+          <div />
           <ul>
             <li>Made by Anser Ghazi</li>
             <li>
@@ -30,6 +31,7 @@ const Layout = ({ children }) => {
               </a>
             </li>
           </ul>
+          <div />
         </Footer>
       </Wrapper>
     </>
@@ -45,6 +47,8 @@ const Wrapper = styled.div`
   background-color: #253037;
   z-index: 1;
   overflow-x: hidden;
+  display: flex;
+  flex-flow: column nowrap;
 `
 
 const Content = styled.div`
@@ -54,16 +58,19 @@ const Content = styled.div`
 const Footer = styled.div`
   position: relative;
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 
   ul {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
   }
 
   li {
     display: flex;
     height: 30px;
+    margin: 0px 40px 0px 40px;
   }
 
   a,
@@ -71,6 +78,10 @@ const Footer = styled.div`
     color: #bebebe;
     text-decoration: none;
     font-family: "Noto Sans", sans-serif;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `
 
