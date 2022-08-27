@@ -92,13 +92,9 @@ const Wrapper = styled.div`
     display: flex;
     min-width: 700px;
     max-width: 918px;
-    border-style: solid;
-    border-color: green;
   }
 
   .header {
-    border-style: solid;
-    border-color: yellow;
   }
 
   h1 {
@@ -115,7 +111,39 @@ const Wrapper = styled.div`
     font-weight: 700;
     color: #bebebe;
     margin: 0px 0px 0px 0px;
-    border-style: solid;
-    border-color: palegoldenrod;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .content {
+      min-width: 700px;
+      max-width: 918px;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .content {
+      min-width: 100px;
+      max-width: 800px;
+      margin-left: 65px;
+      margin-right: 65px;
+    }
+  }
+
+  @media only screen and (max-width: 760px) {
+    .content {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .content {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
   }
 `

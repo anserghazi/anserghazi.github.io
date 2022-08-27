@@ -29,7 +29,6 @@ const Navbar = () => {
   function changeProjects() {
     let projectsIcon = document.getElementById("projects_icon")
     let projectsLink = document.getElementById("projects_link")
-    let projectsNav = document.getElementById("projects_nav")
     if (projectsIcon.textContent == "terminal" || path === "projects") {
       projectsIcon.textContent = "data_object"
       projectsIcon.style.color = "#FF0000"
@@ -236,53 +235,59 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1250px) {
-    .container {
-      min-width: 850px;
-      max-width: 970px;
-    }
-  }
-
-  @media only screen and (max-width: 1100px) {
-    .container {
-      min-width: 670px;
-      max-width: 850px;
-    }
-  }
-
   @media only screen and (max-width: 950px) {
     .container {
-      min-width: 590px;
-      max-width: 850px;
+      min-width: 100px;
     }
+    .container {
+      max-width: none;
+      min-width: none;
+      width: 90%;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
 
+  @media only screen and (max-width: 970px) {
     #main_link {
-      margin-right: 50px;
+      margin-right: 180px;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    #main_link {
+      margin-right: 110px;
     }
   }
 
   @media only screen and (max-width: 800px) {
-    .container {
-      justify-content: center;
-    }
-
-    .nav-item {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
     #main_link {
-      margin-right: -15px;
-    }
-    .nav-item {
-      margin-left: 25px;
-      margin-right: 25px;
+      margin-right: 80px;
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 760px) {
+    #main_link {
+      margin-right: 40px;
+    }
+
+    #about_icon {
+      margin-left: 170px;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .container {
+      width: 90%;
+    }
+
     a {
       font-size: 15px;
+    }
+
+    .nav-item {
+      margin-right: 0px;
+      margin-left: 0px;
     }
     span {
       font-size: 20px;
@@ -290,10 +295,32 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .nav-item {
       margin-left: 15px;
       margin-right: 15px;
+    }
+
+    #about_icon {
+      margin-left: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 545px) {
+    #about_icon {
+      margin-left: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    #main_link {
+      margin-right: -30px;
+    }
+  }
+
+  @media only screen and (max-width: 415px) {
+    #about_icon {
+      margin-left: 50px;
     }
 
     #main_link {
@@ -306,6 +333,16 @@ const Wrapper = styled.div`
 
     span {
       font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    #about_icon {
+      margin-left: 35px;
+    }
+
+    #main_link {
+      margin-right: -150px;
     }
   }
 `
