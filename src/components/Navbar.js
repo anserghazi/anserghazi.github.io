@@ -9,31 +9,21 @@ const Navbar = () => {
   let path = window.location.pathname.split("/")[1]
 
   function changeAbout() {
-    let aboutIcon = document.getElementById("about_me_icon")
+    let aboutIcon = document.getElementById("about_icon")
     let aboutLink = document.getElementById("about_me_link")
-    let aboutNav = document.getElementById("about_nav")
     if (aboutIcon.textContent == "self_improvement" || path === "about") {
-      aboutIcon.textContent = "accessibility_new"
-      aboutIcon.style.color = "#FEFF38"
+      aboutIcon.textContent = "follow_the_signs"
+      aboutIcon.style.color = "#ECFE01"
       aboutLink.style.color = "white"
-      aboutLink.style.textDecorationColor = "#FEFF38"
+      aboutLink.style.textDecoration = "underline"
+      aboutLink.style.textDecorationColor = "#ECFE01"
       aboutLink.style.textUnderlineOffset = "5px"
       aboutLink.style.textDecorationThickness = "4px"
-      aboutLink.style.transition = "all 1s"
-      aboutIcon.style.transition = "all 1s"
-      aboutIcon.style.marginRight = "-3px"
-      aboutNav.style.paddingRight = "3px"
-      aboutNav.style.transition = "all 1s"
     } else {
       aboutIcon.textContent = "self_improvement"
-      aboutIcon.style.color = "#BEBEBE"
-      aboutLink.style.color = "#BEBEBE"
-      aboutLink.style.textDecorationColor = "#181f24"
-      aboutLink.style.transition = "all 1s"
-      aboutIcon.style.transition = "all 1s"
-      aboutIcon.style.marginRight = "0px"
-      aboutNav.style.paddingRight = "0px"
-      aboutNav.style.transition = "all 1s"
+      aboutIcon.style.color = "#A9A9A9"
+      aboutLink.style.color = "#A9A9A9"
+      aboutLink.style.textDecoration = "none"
     }
   }
   function changeProjects() {
@@ -47,21 +37,11 @@ const Navbar = () => {
       projectsLink.style.textDecorationColor = "#FF0000"
       projectsLink.style.textUnderlineOffset = "5px"
       projectsLink.style.textDecorationThickness = "4px"
-      projectsLink.style.transition = "all 1s"
-      projectsIcon.style.transition = "all 1s"
-      projectsIcon.style.marginRight = "-2px"
-      projectsNav.style.paddingRight = "2px"
-      projectsNav.style.transition = "all 1s"
     } else {
       projectsIcon.textContent = "terminal"
       projectsIcon.style.color = "#BEBEBE"
       projectsLink.style.color = "#BEBEBE"
       projectsLink.style.textDecorationColor = "#181f24"
-      projectsLink.style.transition = "all 1s"
-      projectsIcon.style.transition = "all 1s"
-      projectsIcon.style.marginRight = "0px"
-      projectsNav.style.paddingRight = "0px"
-      projectsNav.style.transition = "all 1s"
     }
   }
   function changeGithub() {
@@ -74,17 +54,14 @@ const Navbar = () => {
       githubLink.style.textDecorationColor = "#0091FF"
       githubLink.style.textUnderlineOffset = "5px"
       githubLink.style.textDecorationThickness = "4px"
-      githubLink.style.transition = "all 1s"
-      githubIcon.style.transition = "all 1s"
     } else {
       githubIcon.textContent = "tv"
       githubIcon.style.color = "#BEBEBE"
       githubLink.style.color = "#BEBEBE"
       githubLink.style.textDecorationColor = "#181f24"
-      githubLink.style.transition = "all 1s"
-      githubIcon.style.transition = "all 1s"
     }
   }
+
   return (
     <Wrapper>
       <section className="navigation">
@@ -97,12 +74,13 @@ const Navbar = () => {
           <div className="nav-item" id="about_nav">
             <span
               class="material-icons"
-              id="about_me_icon"
+              id="about_icon"
               onMouseOver={() => changeAbout()}
               onMouseLeave={() => changeAbout()}
             >
               self_improvement
             </span>
+
             <StyledLink
               to="/about"
               id="about_me_link"
@@ -207,7 +185,6 @@ const Wrapper = styled.div`
     color: white;
     margin-left: -30px;
     margin-right: 200px;
-    transition: all 500ms;
     text-decoration: underline;
     text-decoration-color: #181f24;
     text-decoration-style: solid;
@@ -224,17 +201,112 @@ const Wrapper = styled.div`
     }
   }
 
-  #about_me_link {
-    margin-left: 3px;
-  }
-
-  #about_me_icon {
-    line-height: 23px;
-    margin-right: -1px;
-  }
-
   #projects_icon {
     margin-right: 1px;
+  }
+
+  #about_me_link {
+    margin-left: 2px;
+    color: #bebebe;
+    text-decoration-color: #181f24;
+  }
+
+  #about_icon {
+    line-height: 25px;
+    margin-right: -1px;
+    color: #bebebe;
+    margin-right: 0px;
+  }
+
+  #about_nav {
+    transition: all 1s;
+    padding-right: 0px;
+    &:hover {
+    }
+    &:hover #about_icon_before {
+      display: inline;
+    }
+    &:hover #about_icon_after {
+    }
+    &:hover #about_me_link {
+      color: white;
+      text-decoration-color: #feff38;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 4px;
+    }
+  }
+
+  @media only screen and (max-width: 1250px) {
+    .container {
+      min-width: 850px;
+      max-width: 970px;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .container {
+      min-width: 670px;
+      max-width: 850px;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .container {
+      min-width: 590px;
+      max-width: 850px;
+    }
+
+    #main_link {
+      margin-right: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .container {
+      justify-content: center;
+    }
+
+    .nav-item {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    #main_link {
+      margin-right: -15px;
+    }
+    .nav-item {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    a {
+      font-size: 15px;
+    }
+    span {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .nav-item {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    #main_link {
+      font-size: 16px;
+    }
+
+    a {
+      font-size: 11px;
+    }
+
+    span {
+      font-size: 15px;
+    }
   }
 `
 
@@ -245,6 +317,15 @@ const StyledLink = styled(props => <Link {...props} />)`
   text-underline-offset: 5px;
   text-decoration-thickness: 4px;
   font-weight: 600;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    font-size: 11px;
+    margin-left: 0px;
+  }
 `
 
 const StyledMainLink = styled(props => <Link {...props} />)`
