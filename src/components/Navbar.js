@@ -11,18 +11,18 @@ const Navbar = () => {
   function changeAbout() {
     let aboutIcon = document.getElementById("about_icon")
     let aboutLink = document.getElementById("about_me_link")
-    if (aboutIcon.textContent == "self_improvement" || path === "about") {
-      aboutIcon.textContent = "follow_the_signs"
-      aboutIcon.style.color = "#ECFE01"
-      aboutLink.style.color = "white"
+    if (aboutIcon.textContent == "import_contacts" || path === "resume") {
+      aboutIcon.textContent = "auto_stories"
+      aboutIcon.style.color = "#FFA500"
+      aboutLink.style.color = "#FFA500"
       aboutLink.style.textDecoration = "underline"
-      aboutLink.style.textDecorationColor = "#ECFE01"
+      aboutLink.style.textDecorationColor = "#FFA500"
       aboutLink.style.textUnderlineOffset = "5px"
       aboutLink.style.textDecorationThickness = "4px"
     } else {
-      aboutIcon.textContent = "self_improvement"
-      aboutIcon.style.color = "#A9A9A9"
-      aboutLink.style.color = "#A9A9A9"
+      aboutIcon.textContent = "import_contacts"
+      aboutIcon.style.color = "white"
+      aboutLink.style.color = "white"
       aboutLink.style.textDecoration = "none"
     }
   }
@@ -31,15 +31,15 @@ const Navbar = () => {
     let projectsLink = document.getElementById("projects_link")
     if (projectsIcon.textContent == "terminal" || path === "projects") {
       projectsIcon.textContent = "data_object"
-      projectsIcon.style.color = "#FF0000"
-      projectsLink.style.color = "white"
-      projectsLink.style.textDecorationColor = "#FF0000"
+      projectsIcon.style.color = "#FFA500"
+      projectsLink.style.color = "#FFA500"
+      projectsLink.style.textDecorationColor = "#FFA500"
       projectsLink.style.textUnderlineOffset = "5px"
       projectsLink.style.textDecorationThickness = "4px"
     } else {
       projectsIcon.textContent = "terminal"
-      projectsIcon.style.color = "#BEBEBE"
-      projectsLink.style.color = "#BEBEBE"
+      projectsIcon.style.color = "white"
+      projectsLink.style.color = "white"
       projectsLink.style.textDecorationColor = "#181f24"
     }
   }
@@ -48,15 +48,15 @@ const Navbar = () => {
     let githubLink = document.getElementById("github_link")
     if (githubIcon.textContent == "tv") {
       githubIcon.textContent = "display_settings"
-      githubIcon.style.color = "#0091FF"
-      githubLink.style.color = "white"
-      githubLink.style.textDecorationColor = "#0091FF"
+      githubIcon.style.color = "#FFA500"
+      githubLink.style.color = "#FFA500"
+      githubLink.style.textDecorationColor = "#FFA500"
       githubLink.style.textUnderlineOffset = "5px"
       githubLink.style.textDecorationThickness = "4px"
     } else {
       githubIcon.textContent = "tv"
-      githubIcon.style.color = "#BEBEBE"
-      githubLink.style.color = "#BEBEBE"
+      githubIcon.style.color = "white"
+      githubLink.style.color = "white"
       githubLink.style.textDecorationColor = "#181f24"
     }
   }
@@ -65,67 +65,74 @@ const Navbar = () => {
     <Wrapper>
       <section className="navigation">
         <div className="container">
-          <div className="nav-item">
-            <StyledMainLink id="main_link" to="/">
-              Anser Ghazi
-            </StyledMainLink>
+          <div className="nav-group">
+            <div className="nav-item">
+              <StyledMainLink id="main_link" to="/">
+                Anser Ghazi
+              </StyledMainLink>
+              <StyledMainLink id="mini_main_link" to="/">
+                AG
+              </StyledMainLink>
+            </div>
           </div>
-          <div className="nav-item" id="about_nav">
-            <span
-              class="material-icons"
-              id="about_icon"
-              onMouseOver={() => changeAbout()}
-              onMouseLeave={() => changeAbout()}
-            >
-              self_improvement
-            </span>
+          <div className="nav-group">
+            <div className="nav-item" id="about_nav">
+              <span
+                class="material-icons"
+                id="about_icon"
+                onMouseOver={() => changeAbout()}
+                onMouseLeave={() => changeAbout()}
+              >
+                import_contacts
+              </span>
 
-            <StyledLink
-              to="/about"
-              id="about_me_link"
-              onMouseOver={() => changeAbout()}
-              onMouseLeave={() => changeAbout()}
-            >
-              About Me
-            </StyledLink>
-          </div>
-          <div className="nav-item" id="projects_nav">
-            <span
-              class="material-icons"
-              id="projects_icon"
-              onMouseOver={() => changeProjects()}
-              onMouseLeave={() => changeProjects()}
-            >
-              terminal
-            </span>
-            <StyledLink
-              to="/projects"
-              id="projects_link"
-              onMouseOver={() => changeProjects()}
-              onMouseLeave={() => changeProjects()}
-            >
-              Projects
-            </StyledLink>
-          </div>
-          <div className="nav-item" id="github_nav">
-            <span
-              class="material-icons"
-              id="github_icon"
-              onMouseOver={() => changeGithub()}
-              onMouseLeave={() => changeGithub()}
-            >
-              tv
-            </span>
-            <a
-              href="https://github.com/anserghazi"
-              target="_blank"
-              rel="noreferrer"
-              id="github_link"
-              onMouseOver={() => changeGithub()}
-              onMouseLeave={() => changeGithub()}
-            >
-              GitHub
-            </a>
+              <StyledLink
+                to="/resume"
+                id="about_me_link"
+                onMouseOver={() => changeAbout()}
+                onMouseLeave={() => changeAbout()}
+              >
+                Resume
+              </StyledLink>
+            </div>
+            <div className="nav-item" id="projects_nav">
+              <span
+                class="material-icons"
+                id="projects_icon"
+                onMouseOver={() => changeProjects()}
+                onMouseLeave={() => changeProjects()}
+              >
+                terminal
+              </span>
+              <StyledLink
+                to="/projects"
+                id="projects_link"
+                onMouseOver={() => changeProjects()}
+                onMouseLeave={() => changeProjects()}
+              >
+                Projects
+              </StyledLink>
+            </div>
+            <div className="nav-item" id="github_nav">
+              <span
+                class="material-icons"
+                id="github_icon"
+                onMouseOver={() => changeGithub()}
+                onMouseLeave={() => changeGithub()}
+              >
+                tv
+              </span>
+              <a
+                href="https://github.com/anserghazi"
+                target="_blank"
+                rel="noreferrer"
+                id="github_link"
+                onMouseOver={() => changeGithub()}
+                onMouseLeave={() => changeGithub()}
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -135,9 +142,6 @@ const Navbar = () => {
 
 const Wrapper = styled.div`
   .navigation {
-    position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
     padding: 5px;
     z-index: 5;
@@ -145,14 +149,22 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 7%;
+    min-height: 65px;
+    max-height: 69px;
+    overflow-x: hidden;
   }
 
   .container {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    min-width: 1000px;
-    max-width: 1200px;
+    justify-content: space-between;
+    min-width: 1150px;
+  }
+
+  .nav-group {
+    display: flex;
+    gap: 40px;
   }
 
   .nav-item {
@@ -164,7 +176,7 @@ const Wrapper = styled.div`
   }
 
   a {
-    color: #bebebe;
+    color: white;
     font-family: "Yantramanav", sans-serif;
     text-decoration: underline;
     text-decoration-color: #181f24;
@@ -173,27 +185,39 @@ const Wrapper = styled.div`
     font-weight: 600;
     line-height: 28px;
     margin-left: 3px;
-    margin-right: -25px;
+    margin-right: 10px;
   }
   span {
-    color: #bebebe;
+    color: white;
+  }
+
+  #mini_main_link {
+    display: none;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    margin-left: 20px;
+    margin-right: 0px;
+    &:hover {
+      color: #ffa500;
+    }
+    &:after {
+    }
+    &:active {
+      font-weight: 800;
+    }
   }
 
   #main_link {
+    font-size: 28px;
     font-weight: 800;
     color: white;
-    margin-left: -30px;
-    margin-right: 200px;
-    text-decoration: underline;
-    text-decoration-color: #181f24;
-    text-decoration-style: solid;
-    text-underline-offset: 5px;
-    text-decoration-thickness: 7px;
+    margin-left: 20px;
+    margin-right: 400px;
     &:hover {
-      text-decoration-color: #24e85d;
+      color: #ffa500;
     }
     &:after {
-      text-decoration-color: #181f24;
     }
     &:active {
       font-weight: 800;
@@ -205,15 +229,15 @@ const Wrapper = styled.div`
   }
 
   #about_me_link {
-    margin-left: 2px;
-    color: #bebebe;
+    color: white;
     text-decoration-color: #181f24;
+    margin-left: 4px;
   }
 
   #about_icon {
     line-height: 25px;
     margin-right: -1px;
-    color: #bebebe;
+    color: white;
     margin-right: 0px;
   }
 
@@ -229,120 +253,78 @@ const Wrapper = styled.div`
     }
     &:hover #about_me_link {
       color: white;
-      text-decoration-color: #feff38;
+      text-decoration-color: #ffa500;
       text-underline-offset: 5px;
       text-decoration-thickness: 4px;
     }
   }
 
-  @media only screen and (max-width: 950px) {
-    .container {
-      min-width: 100px;
-    }
+  #github_link {
+    margin-right: 30px;
+  }
+
+  @media only screen and (max-width: 1150px) {
     .container {
       max-width: none;
-      min-width: none;
-      width: 90%;
+      min-width: 100px;
+      width: 100%;
       margin-right: 0;
       padding-right: 0;
     }
   }
 
-  @media only screen and (max-width: 970px) {
-    #main_link {
-      margin-right: 180px;
-    }
-  }
-
-  @media only screen and (max-width: 900px) {
-    #main_link {
-      margin-right: 110px;
-    }
-  }
-
-  @media only screen and (max-width: 800px) {
-    #main_link {
-      margin-right: 80px;
-    }
-  }
-
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 950px) {
     #main_link {
       margin-right: 40px;
     }
-
-    #about_icon {
-      margin-left: 170px;
-    }
   }
 
-  @media only screen and (max-width: 650px) {
-    .container {
-      width: 90%;
-    }
-
+  @media only screen and (max-width: 680px) {
     a {
-      font-size: 15px;
+      font-size: 18px;
     }
 
-    .nav-item {
-      margin-right: 0px;
-      margin-left: 0px;
+    #about_me_link {
+      font-size: 18px;
     }
-    span {
-      font-size: 20px;
-      line-height: 25px;
+
+    #projects_link {
+      font-size: 18px;
     }
   }
 
-  @media only screen and (max-width: 600px) {
-    .nav-item {
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-
-    #about_icon {
-      margin-left: 100px;
+  @media only screen and (max-width: 620px) {
+    .nav-group {
+      gap: 5px;
     }
   }
 
-  @media only screen and (max-width: 545px) {
-    #about_icon {
-      margin-left: 40px;
+  @media only screen and (max-width: 620px) {
+    .material-icons {
+      display: none;
     }
   }
 
   @media only screen and (max-width: 480px) {
     #main_link {
-      margin-right: -30px;
+      display: none;
     }
-  }
-
-  @media only screen and (max-width: 415px) {
-    #about_icon {
-      margin-left: 50px;
-    }
-
-    #main_link {
-      font-size: 16px;
-    }
-
-    a {
-      font-size: 11px;
-    }
-
-    span {
-      font-size: 15px;
+    #mini_main_link {
+      display: flex;
     }
   }
 
   @media only screen and (max-width: 370px) {
-    #about_icon {
-      margin-left: 35px;
+    #about_me_link {
+      font-size: 15px;
     }
 
-    #main_link {
-      margin-right: -150px;
+    #projects_link {
+      font-size: 15px;
+    }
+
+    a {
+      font-size: 15px;
     }
   }
 `
