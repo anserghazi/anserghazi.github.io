@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import "@fontsource/material-icons-outlined"
 import "@fontsource/yantramanav"
+import "../assets/css/global.css"
 
 const resume = () => {
   return (
@@ -22,10 +23,12 @@ const resume = () => {
 const Wrapper = styled.div`
   margin-top: 7px;
   margin-bottom: 200px;
+  min-height: 1000px;
   .section {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    height: 100vh;
   }
 
   .content {
@@ -34,6 +37,7 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
     width: 100vh;
     gap: 25px;
+    height: 100vh;
   }
 
   .header {
@@ -111,8 +115,8 @@ const Wrapper = styled.div`
   }
 
   iframe {
-    min-height: 1120px;
-    width: 87%;
+    min-height: 280vh;
+    width: 95%;
     min-width: 100px;
     max-width: 1110px;
     border: none;
@@ -123,6 +127,9 @@ const Wrapper = styled.div`
       min-width: 700px;
       max-width: 918px;
     }
+    iframe {
+      min-height: 1500px;
+    }
   }
 
   @media only screen and (max-width: 950px) {
@@ -131,6 +138,9 @@ const Wrapper = styled.div`
       max-width: 800px;
       margin-left: 65px;
       margin-right: 65px;
+    }
+    iframe {
+      min-height: 1100px;
     }
   }
 
@@ -146,13 +156,13 @@ const Wrapper = styled.div`
 
   @media only screen and (max-width: 670px) {
     iframe {
-      min-height: 750px;
+      max-height: 20px;
     }
   }
 
   @media only screen and (max-width: 520px) {
     iframe {
-      min-height: 660px;
+      min-height: 590px;
     }
   }
 

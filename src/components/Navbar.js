@@ -172,7 +172,7 @@ const Wrapper = styled.div`
     margin-bottom: 15px;
     display: flex;
     align-self: center;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   a {
@@ -273,7 +273,7 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 970px) {
     #main_link {
       margin-right: 40px;
     }

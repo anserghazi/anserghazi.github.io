@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import "../assets/css/global.css"
 
 const projects = () => {
   return (
@@ -21,7 +22,7 @@ const projects = () => {
               <p class="technologies">
                 TypeScript, NestJS, Node.js, Express, React, MySQL
               </p>
-              <div class="photo">
+              <div class="project-photo">
                 <StaticImage
                   src="../assets/images/digital-cupboard.png"
                   width={800}
@@ -35,13 +36,25 @@ const projects = () => {
                 cart, and submit your order through your local grocery store's
                 app/website.
               </p>
+              <div class="project-buttons">
+                <button id="disabled-button" disabled>
+                  Demo coming soon
+                </button>
+                <a
+                  class="project_github"
+                  href="https://github.com/anserghazi/digital-cupboard"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
             <div class="project_header">
               <h2 class="project_h2">Runroute</h2>
               <p class="technologies">
                 JavaScript, Google Maps JavaScript API, HTML, CSS
               </p>
-              <div class="photo">
+              <div class="project-photo">
                 <StaticImage src="../assets/images/runroute.png" width={800} />
               </div>
               <p class="project_p">
@@ -50,6 +63,22 @@ const projects = () => {
                 added as waypoints on your journey. Runroute uses Google Maps
                 Javascript API, Directions API, Places API, Geolocation API.
               </p>
+              <div class="project-buttons">
+                <a
+                  class="project_demo"
+                  href="https://www.runroute.app/"
+                  target="_blank"
+                >
+                  Demo
+                </a>
+                <a
+                  class="project_github"
+                  href="https://github.com/anserghazi/runroute"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -58,7 +87,7 @@ const projects = () => {
             <div class="project_header">
               <h2 class="project_h2">Portfolio Website</h2>
               <p class="technologies">Node.js, React, Gatsby, HTML, CSS</p>
-              <div class="photo">
+              <div class="project-photo">
                 <StaticImage
                   src="../assets/images/portfolio-site.png"
                   width={800}
@@ -68,13 +97,22 @@ const projects = () => {
                 My online portfolio, which displays my latest projects and
                 contact information.
               </p>
+              <div class="project-buttons">
+                <a
+                  class="project_github"
+                  href="https://github.com/anserghazi/portfolio-site"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
             <div class="project_header">
               <h2 class="project_h2">MERN Notepad</h2>
               <p class="technologies">
                 JavaScript, Node.js, Express, React, MongoDB
               </p>
-              <div class="photo">
+              <div class="project-photo">
                 <StaticImage
                   src="../assets/images/online-notepad.png"
                   width={800}
@@ -85,6 +123,15 @@ const projects = () => {
                 write their own posts, and copy/edit/delete any post on the
                 notepad.
               </p>
+              <div class="project-buttons">
+                <a
+                  class="project_github"
+                  href="https://github.com/anserghazi/ansers-online-notepad"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -204,12 +251,13 @@ const Wrapper = styled.div`
   }
 
   .project_header {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     background-color: #181f24;
     flex-basis: 0;
     flex-grow: 1;
     padding: 15px;
-    min-height: 400px;
   }
 
   .project_h2 {
@@ -224,7 +272,7 @@ const Wrapper = styled.div`
   .technologies {
     font-size: 20px;
     color: white;
-    margin-top: -5px;
+    margin-top: 0px;
     margin-bottom: 10px;
   }
 
@@ -242,20 +290,87 @@ const Wrapper = styled.div`
     margin: 15px 0px 0px 0px;
   }
 
+  .project-buttons {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    flex-grow: 1;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+
+  .project-buttons > * {
+    text-decoration: none;
+    color: white;
+    background-color: #1e282e;
+    border-style: none;
+    font-family: "Yantramanav", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    transition-duration: 0.05s;
+    border-radius: 10px;
+    box-shadow: 0 9px #131a1d;
+    margin-top: -5px;
+    border-style: solid;
+    border-color: #1e282e;
+    border-width: 1px;
+    user-select: none;
+    &:hover {
+      color: #ffa500;
+      font-size: 21px;
+    }
+    &:active {
+      box-shadow: 0 5px #181f24;
+      transform: translateY(4px);
+      border-color: #1e282e;
+    }
+  }
+
+  .project_github {
+    align-self: flex-end;
+    padding: 15px 65px 15px 65px;
+  }
+
+  .project_demo {
+    align-self: flex-end;
+    padding: 15px 70px 15px 70px;
+  }
+
+  #disabled-button {
+    border-style: dashed;
+    border-color: #242f36;
+    border-width: 5px;
+    width: 197px;
+    background-color: #181f24;
+    box-shadow: 0 9px #131a1d;
+    &:hover {
+    }
+    &:active {
+      transform: none;
+    }
+  }
+
   @media only screen and (max-width: 1000px) {
     h1 {
       font-size: 60px;
     }
-  }
 
-  /* @media only screen and (max-width: 950px) {
-    .content {
-      min-width: 100px;
-      max-width: 800px;
-      margin-left: 65px;
-      margin-right: 65px;
+    .project_github {
+      align-self: flex-end;
+      padding: 10px 15px 10px 15px;
     }
-  } */
+
+    .project_demo {
+      align-self: flex-end;
+      padding: 10px 20px 10px 20px;
+    }
+
+    #disabled-button {
+      display: none;
+    }
+  }
 
   @media only screen and (max-width: 790px) {
     h1 {
@@ -264,30 +379,40 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 730px) {
+    .project_content {
+      display: flex;
+      flex-flow: column nowrap;
+    }
     .photo_header {
       display: none;
     }
   }
 
   @media only screen and (max-width: 670px) {
-    .project_content {
-      display: flex;
-      flex-flow: column nowrap;
-      margin-top: 0px;
-    }
-
     .project_section {
       margin-top: 25px;
     }
   }
 
-  @media only screen and (max-width: 480px) {
-    height: 200vh;
+  @media only screen and (max-width: 489px) {
     gap: 25px;
+    .project_github {
+      align-self: flex-end;
+      padding: 10px 15px 10px 15px;
+    }
+
+    .project_demo {
+      align-self: flex-end;
+      padding: 10px 20px 10px 20px;
+    }
+
+    #disabled-button {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 420px) {
-    margin-top: -10px;
+    margin-top: 10px;
     .header {
       gap: 10px;
     }
@@ -301,8 +426,10 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 350px) {
+    .project_h2 {
+      font-size: 30px;
+    }
     .content {
-      margin-left: 15px;
       margin-right: 15px;
     }
   }
