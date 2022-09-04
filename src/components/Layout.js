@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <Page>
       <NavBar />
       <Wrapper>
         <Content>{children}</Content>
@@ -34,9 +34,14 @@ const Layout = ({ children }) => {
           <div />
         </Footer>
       </Wrapper>
-    </>
+    </Page>
   )
 }
+
+const Page = styled.div`
+  height: 100vh;
+  background-color: #1e282e;
+`
 
 const Wrapper = styled.div`
   padding-top: 65px;
@@ -47,6 +52,34 @@ const Wrapper = styled.div`
   flex-flow: column nowrap;
   overflow: hidden;
   overflow-x: hidden;
+  min-height: 1300px;
+
+  @media only screen and (max-width: 800px) {
+    min-height: 1200px;
+  }
+  @media only screen and (max-width: 760px) {
+    min-height: 1100px;
+  }
+
+  @media only screen and (max-width: 670px) {
+    min-height: 1000px;
+  }
+
+  @media only screen and (max-width: 580px) {
+    min-height: 900px;
+  }
+
+  @media only screen and (max-width: 490px) {
+    min-height: 800px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    min-height: 650px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    min-height: 450px;
+  }
 `
 
 const Content = styled.div`
@@ -83,10 +116,6 @@ const Footer = styled.div`
 
   a:hover {
     text-decoration: underline;
-  }
-
-  @media only screen and (max-width: 520px) {
-    min-height: 950px;
   }
 
   @media only screen and (max-width: 500px) {

@@ -23,7 +23,6 @@ const resume = () => {
 const Wrapper = styled.div`
   margin-top: 7px;
   margin-bottom: 200px;
-  min-height: 1000px;
   .section {
     display: flex;
     flex-flow: row nowrap;
@@ -119,62 +118,83 @@ const Wrapper = styled.div`
     min-width: 100px;
     max-width: 1110px;
     border: none;
-    height: 20vh;
+    height: 100vh;
   }
 
-  @media only screen and (max-height: 2200px) {
+  @media only screen and (max-width: 2300px) {
+    max-height: 1100px;
+    height: 1100px;
+    iframe {
+      height: 1100px;
+    }
   }
 
   @media only screen and (max-width: 1100px) {
+    max-height: 1100px;
+    height: 1100px;
+    iframe {
+      height: 1100px;
+    }
     .content {
       min-width: 700px;
       max-width: 918px;
     }
-    iframe {
-      height: 1300px;
-    }
   }
 
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 800px) {
     .content {
       min-width: 100px;
       max-width: 800px;
       margin-left: 65px;
       margin-right: 65px;
     }
+    max-height: 1000px;
+    height: 1000px;
     iframe {
-      min-height: 1100px;
+      height: 1000px;
     }
   }
 
   @media only screen and (max-width: 760px) {
-    height: 1100px;
     .content {
       margin-left: 30px;
       margin-right: 30px;
     }
-    iframe {
-      min-height: 900px;
-    }
   }
 
   @media only screen and (max-width: 670px) {
+    max-height: 800px;
+    height: 800px;
     iframe {
-      max-height: 20px;
+      height: 800px;
     }
   }
 
-  @media only screen and (max-width: 520px) {
-    height: 950px;
+  @media only screen and (max-width: 580px) {
+    max-height: 700px;
+    height: 700px;
+    iframe {
+      height: 700px;
+    }
+  }
+
+  @media only screen and (max-width: 490px) {
+    max-height: 600px;
+    height: 600px;
+    iframe {
+      height: 600px;
+    }
   }
 
   @media only screen and (max-width: 420px) {
+    max-height: 350px;
+    height: 350px;
     iframe {
-      min-height: 520px;
+      height: 500px;
     }
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 320px) {
     .content {
       margin-left: 15px;
       margin-right: 15px;
@@ -184,8 +204,10 @@ const Wrapper = styled.div`
       font-size: 22px;
     }
 
+    max-height: 270px;
+    height: 270px;
     iframe {
-      min-height: 420px;
+      height: 400px;
     }
   }
 
