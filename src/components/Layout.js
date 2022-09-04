@@ -74,6 +74,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
+    padding-top: 45px;
     min-height: 650px;
   }
 

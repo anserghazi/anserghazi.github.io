@@ -213,7 +213,7 @@ const Wrapper = styled.div`
     display: inline;
     margin-bottom: -5px;
     align-self: flex-start;
-    margin-top: 0;
+    margin-top: 0px;
   }
 
   p {
@@ -435,12 +435,11 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    margin-top: -10px;
     .header {
       gap: 10px;
     }
     h1 {
-      font-size: 35px;
+      font-size: 45px;
     }
 
     p {
@@ -454,6 +453,12 @@ const Wrapper = styled.div`
     }
     .content {
       margin-right: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 335px) {
+    h1 {
+      font-size: 35px;
     }
   }
 `
