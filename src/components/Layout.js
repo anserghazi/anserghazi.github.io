@@ -85,6 +85,10 @@ const Footer = styled.div`
     text-decoration: underline;
   }
 
+  @media only screen and (max-width: 520px) {
+    min-height: 950px;
+  }
+
   @media only screen and (max-width: 500px) {
     ul {
       gap: 30px;

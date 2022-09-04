@@ -11,7 +11,7 @@ const resume = () => {
       <Wrapper>
         <div class="section">
           <iframe
-            src="https://drive.google.com/file/d/12JXYwSomR0UIf2r-6IpRXe0G2LnoIYGV/preview"
+            src="https://drive.google.com/file/d/1CpWLn5SGxUwa9xDt-bOeWTiBLEIXJjkW/preview"
             allow="autoplay"
           ></iframe>
         </div>
@@ -115,11 +115,14 @@ const Wrapper = styled.div`
   }
 
   iframe {
-    min-height: 280vh;
     width: 95%;
     min-width: 100px;
     max-width: 1110px;
     border: none;
+    height: 20vh;
+  }
+
+  @media only screen and (max-height: 2200px) {
   }
 
   @media only screen and (max-width: 1100px) {
@@ -128,7 +131,7 @@ const Wrapper = styled.div`
       max-width: 918px;
     }
     iframe {
-      min-height: 1500px;
+      height: 1300px;
     }
   }
 
@@ -145,6 +148,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 760px) {
+    height: 1100px;
     .content {
       margin-left: 30px;
       margin-right: 30px;
@@ -161,9 +165,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 520px) {
-    iframe {
-      min-height: 590px;
-    }
+    height: 950px;
   }
 
   @media only screen and (max-width: 420px) {

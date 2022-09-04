@@ -85,7 +85,7 @@ export default function Home() {
               <div class="project-buttons">
                 <a
                   class="project_demo"
-                  href="https://www.runroute.app/"
+                  href="https://www.runroute.app/views/html/application.html"
                   target="_blank"
                 >
                   Demo
