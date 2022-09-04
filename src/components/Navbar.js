@@ -6,7 +6,10 @@ import "@fontsource/yantramanav"
 import "@fontsource/material-icons"
 
 const Navbar = () => {
-  let path = window.location.pathname.split("/")[1]
+  let path = ""
+  if (typeof window !== "undefined") {
+    path = window.location.pathname.split("/")[1]
+  }
 
   function changeAbout() {
     let aboutIcon = document.getElementById("about_icon")
