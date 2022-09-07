@@ -1,10 +1,14 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import NavBar from "./Navbar"
 import styled from "styled-components"
 
 const Layout = ({ children }) => {
   return (
     <Page>
+      <Helmet>
+        <title>Anser Ghazi</title>
+      </Helmet>
       <NavBar />
       <Wrapper>
         <Content>{children}</Content>
