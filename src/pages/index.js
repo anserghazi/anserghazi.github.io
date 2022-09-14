@@ -255,7 +255,7 @@ const Wrapper = styled.div`
   } */
 
   .intro {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .project_section {

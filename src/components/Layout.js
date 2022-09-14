@@ -15,7 +15,16 @@ const Layout = ({ children }) => {
         <Footer>
           <div />
           <ul>
-            <li>Anser Ghazi</li>
+            <li>Made by Anser Ghazi</li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/anserghazi/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </li>
             <li>
               <a
                 href="https://github.com/anserghazi"
@@ -94,6 +103,7 @@ const Content = styled.div`
 
 const Footer = styled.div`
   margin-top: 80px;
+  margin-bottom: 10px;
   position: relative;
   width: 99%;
   display: flex;
@@ -103,7 +113,7 @@ const Footer = styled.div`
   ul {
     display: flex;
     flex-flow: row nowrap;
-    gap: 100px;
+    gap: 40px;
     padding-left: 0px;
   }
 
