@@ -12,7 +12,7 @@ body {
     width: 6px;
 }
 ::-webkit-scrollbar-track { 
-    -webkit-border-radius: 10px;
+    -webkit-border-radius: 9px;
     border-radius: 0px;
     background: #1e282e;
 }
