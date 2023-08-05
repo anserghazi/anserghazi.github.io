@@ -6,3 +6,20 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track { 
+    -webkit-border-radius: 10px;
+    border-radius: 0px;
+    background: #1e282e;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #8d929e; 
+}
+
